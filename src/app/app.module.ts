@@ -10,6 +10,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ApiProvider } from '../providers/api/api';
+import { SumPage } from '../pages/sum/sum';
+// import { ExportAsModule } from 'ngx-export-as';
+import { File } from '@ionic-native/file';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +23,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SumPage
+
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    // ExportAsModule,
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages: true,
+      
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,12 +41,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SumPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider,
+    AndroidPermissions,
+    File
   ]
 })
 export class AppModule {}

@@ -1,11 +1,100 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar color="secondary" text-center>
+      <ion-title>Cash Counter</ion-title>
+    </ion-navbar>
+  </ion-header>
 
-<ion-content padding>
+  <ion-content >
+    <div style="width:100%" >
+      <ion-grid >
+        <ion-row class="bgx">
+          <ion-col col-4 text-center>
+            valor
+          </ion-col>
+          <ion-col col-4 text-center>
+              antall
+         </ion-col>
+            <ion-col col-4 text-center>
+                belop
+         </ion-col>
+        </ion-row>
+  <br>
+        <ion-row>
+          <ion-col col-4 class="buttonx">
+            20
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="mynt.twenty"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4 class="buttonx">
+             {{mynt.twenty * 20 || 0}}
+            </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col col-4 class="buttonx">
+            10
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="mynt.ten"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4 class="buttonx">
+              {{mynt.ten * 10 || 0}}
+            </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col col-4 class="buttonx">
+            5
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="mynt.five"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4 class="buttonx">
+              {{mynt.five * 5 || 0}}
+            </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col col-4 class="buttonx">
+            1
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="mynt.one"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4 class="buttonx">
+              {{mynt.one * 1 || 0}}
+            </ion-col>
+        </ion-row>
+        <br>
 
-</ion-content>
+        <ion-row >
+          <ion-col text-center class="bgx" style="padding:15px">
+              total = {{total() || 0 }}
+
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </div>
+  </ion-content>
+
+  <ion-footer no-margin no-padding>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button icon-only (click)="reset()">
+          <ion-icon name="md-refresh"></ion-icon>
+        </button>
+
+      </ion-col>
+    </ion-row>
+  </ion-footer>

@@ -1,17 +1,113 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="secondary" text-center>
+    <ion-title>Cash Counter</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content >
+  <div style="width:100%">
+    <ion-grid >
+      <ion-row class="bgx">
+        <ion-col col-4 text-center>
+          valor
+        </ion-col>
+        <ion-col col-4 text-center>
+            antall
+          </ion-col>
+          <ion-col col-4 text-center>
+              belop
+            </ion-col>
+      </ion-row>
+<br>
+      <ion-row>
+        <ion-col col-4 class="buttonx">
+          1000
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.thousand"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 class="buttonx">
+           {{sedler.thousand * 1000 || 0}}
+          </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col col-4 class="buttonx">
+          500
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.five"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 class="buttonx">
+            {{sedler.five * 500 || 0}}
+          </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col col-4 class="buttonx">
+          200
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.two"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 class="buttonx">
+            {{sedler.two * 200 || 0}}
+          </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col col-4 class="buttonx">
+          100
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.hundred"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 class="buttonx">
+            {{sedler.hundred * 100 || 0}}
+          </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col col-4 class="buttonx">
+          50
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.fifty"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 class="buttonx">
+            {{sedler.fifty * 50}}
+          </ion-col>
+      </ion-row>
+      <br>
+      <ion-row >
+        <ion-col text-center class="bgx" style="padding:15px">
+            total = {{total() || 0 }}
+
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </div>
 </ion-content>
+
+<ion-footer no-margin no-padding>
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button icon-only (click)="reset()">
+        <ion-icon name="md-refresh"></ion-icon>
+      </button>
+
+    </ion-col>
+  </ion-row>
+</ion-footer>

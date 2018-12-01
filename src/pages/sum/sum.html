@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar color="secondary" text-center>
+      <ion-title>Cash Counter</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="go()">
+          <ion-icon name="settings" ></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content >
+    <div style="width:100%">
+      <ion-grid >
+
+  <br>
+
+        <br>
+
+        <br>
+
+        <ion-row >
+          <ion-col text-center class="bgx" style="padding:15px;background-color:#177556;color:white;font-size: 20px;">
+              total = {{total() || 0 }}
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </div>
+  </ion-content>
+
+  <ion-footer no-margin no-padding>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button icon-only (click)="reset()">
+          <ion-icon name="ios-sync-outline"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-4 text-center>
+            <button ion-button icon-only (click)="goSave()">
+              <ion-icon name="folder"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4 text-center>
+              <button ion-button icon-only >
+                <ion-icon name="send"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-4 text-center>
+                <button ion-button icon-only >
+                  <ion-icon name="print"></ion-icon>
+                </button>
+              </ion-col>
+
+    </ion-row>
+  </ion-footer>
