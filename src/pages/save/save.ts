@@ -5,7 +5,7 @@ import { ApiProvider } from '../../providers/api/api';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 
-
+import{SumPage} from'../../pages/sum/sum';
 import { File } from '@ionic-native/file';
 
 
@@ -28,6 +28,7 @@ export class SavePage {
         myntrull:this.api.myntrull,
         mynt: this.api.mynt,
         sedler: this.api.sedler,
+        totalsum:localStorage.getItem('tsum'),
         timestamp: new Date().toISOString()
       }
   }
@@ -38,7 +39,9 @@ export class SavePage {
     this.generatePdf();
   }
 
-
+goBack(){
+  this.navCtrl.push(SumPage);
+}
 
   generatePdf(){
     let index = Number(this.index);

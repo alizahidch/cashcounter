@@ -8,12 +8,12 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class ApiProvider {
-
+  
   constructor() {
     console.log('Hello ApiProvider Provider');
   }
 
-
+totalsum=null;
 
   sedler={
     thousand:null,

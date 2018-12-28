@@ -76,12 +76,7 @@
         </ion-row>
         <br>
 
-        <ion-row >
-          <ion-col text-center class="bgx" style="padding:15px">
-              total = {{total() || 0 }}
-
-          </ion-col>
-        </ion-row>
+       
 
       </ion-grid>
 
@@ -89,6 +84,12 @@
   </ion-content>
 
   <ion-footer no-margin no-padding>
+      <ion-row >
+          <ion-col text-center class="bgx" style="padding:15px">
+              total  = {{total() || 0 }}
+
+          </ion-col>
+        </ion-row>
     <ion-row>
       <ion-col text-center>
         <button ion-button icon-only (click)="reset()" >

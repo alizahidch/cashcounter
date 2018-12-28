@@ -20,10 +20,17 @@
         <br>
 
         <ion-row >
+          
           <ion-col text-center class="bgx" style="padding:15px;background-color:#177556;color:white;font-size: 20px;">
-              total = {{total() || 0 }}
+              total sum = {{totalsum  }}
           </ion-col>
         </ion-row>
+        <ion-row >
+            
+            <ion-col text-center class="bgx" style="padding:15px;background-color:#177556;color:white;font-size: 20px;">
+                <button ion-button (tap)="total()">REFRESH</button>
+            </ion-col>
+          </ion-row>
 
       </ion-grid>
 

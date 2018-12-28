@@ -5,7 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header  hideBackButton="true">
-
+    <ion-navbar color="secondary" text-center>
+        <ion-title>Cash Counter</ion-title>
+        
+      </ion-navbar>
 </ion-header>
 
 
@@ -18,12 +21,12 @@
        <br>
      <b>  {{organization}} </b>
       </ion-col>
-      <ion-col col-12 text-center>
+      <!-- <ion-col col-12 text-center>
           {{index }}
-        </ion-col>
-        <ion-col col-12 text-center>
+        </ion-col> -->
+        <!-- <ion-col col-12 text-center>
             <strong>Cash Counter</strong>
-          </ion-col>
+          </ion-col> -->
     </ion-row>
 
     <ion-row class="bgxgrey">
@@ -347,9 +350,32 @@
             {{ (data.myntrull.twenty * 20) + (data.myntrull.ten * 10) + (data.myntrull.five * 5) + (data.myntrull.one * 1)  || 0 }}
             </ion-col>
       </ion-row>
-
+      <ion-row>
+          TOTALSUM: {{data?.totalsum}}
+        </ion-row>
       <ion-row>
         TIMESTAMP: {{data?.timestamp}}
       </ion-row>
   </ion-grid>
 </ion-content>
+<ion-footer no-margin no-padding>
+    
+    <ion-row>
+        <ion-col col-6 text-center>
+            <button ion-button icon-only (click)="goSave()">
+              <ion-icon name="folder"></ion-icon>
+            </button>
+          </ion-col>
+          <!-- <ion-col col-4 text-center>
+              <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="send"></ion-icon>
+              </button>
+            </ion-col> -->
+            <ion-col col-6 text-center>
+                <button ion-button icon-only >
+                  <ion-icon name="print"></ion-icon>
+                </button>
+              </ion-col>
+
+    </ion-row>
+  </ion-footer>

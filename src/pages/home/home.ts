@@ -29,6 +29,7 @@ sedler={
   total(){
     let number = (this.sedler.thousand * 1000) + (this.sedler.five * 500) + (this.sedler.two * 200) + (this.sedler.hundred * 100) + (this.sedler.fifty * 50);
   return number;
+  
   }
 
 
