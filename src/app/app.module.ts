@@ -15,6 +15,7 @@ import { SumPage } from '../pages/sum/sum';
 // import { ExportAsModule } from 'ngx-export-as';
 import { File } from '@ionic-native/file';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApiProvider,
     AndroidPermissions,
+    SocialSharing,
     File
   ]
 })

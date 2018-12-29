@@ -362,18 +362,18 @@
 <ion-footer no-margin no-padding>
     
     <ion-row>
-        <ion-col col-6 text-center>
+        <!-- <ion-col col-4 text-center>
             <button ion-button icon-only (click)="goSave()">
               <ion-icon name="folder"></ion-icon>
             </button>
-          </ion-col>
-          <!-- <ion-col col-4 text-center>
-              <button ion-button icon-only (click)="goBack()">
+          </ion-col> -->
+          <ion-col col-6 text-center>
+              <button ion-button icon-only (click)="appShare()">
                 <ion-icon name="send"></ion-icon>
               </button>
-            </ion-col> -->
+            </ion-col>
             <ion-col col-6 text-center>
-                <button ion-button icon-only >
+                <button ion-button icon-only (click)="print()">
                   <ion-icon name="print"></ion-icon>
                 </button>
               </ion-col>
