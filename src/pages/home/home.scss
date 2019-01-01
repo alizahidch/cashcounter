@@ -1,6 +1,9 @@
 page-home {
 
   ion-input {
+    // background-color:#177556 !important;
+    color:#ffff !important;
+    // width: 100% !important;
     input {
       text-align: center;
       /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
@@ -8,8 +11,9 @@ page-home {
         text-align: center;
       }
     }
+   
   }
-  
+ 
   .bgx{
     background-color:#177556;
     color:#ffff;
@@ -17,10 +21,20 @@ page-home {
   .buttonx{
     background-color:#177556;
     color:#ffff;
+    padding:30px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+
+  }
+  .buttony{
+    background-color:greenyellow;
+    color:black;
     padding:20px;
     font-size: 20px;
     justify-content: center;
     text-align: center;
 
   }
+  
 }

@@ -8,7 +8,7 @@ import { ApiProvider } from '../../providers/api/api';
 })
 export class AboutPage  {
 
-
+myntcount=this.api.mynttotal
 
   mynt={
     twenty:null,
@@ -22,24 +22,29 @@ export class AboutPage  {
 
     ionViewDidLoad(){
       this.mynt = this.api.mynt;
+      this.myntcount=this.api.mynttotal;
     }
 
 
     total(){
       let number = (this.mynt.twenty * 20) + (this.mynt.ten * 10) + (this.mynt.five * 5) + (this.mynt.one * 1) ;
-    return number;
+      this.api.mynttotal=number;
+      // localStorage.setItem('myntcount',this.myntcount);
+    return this.api.mynttotal;
     }
 
 
 
     reset(){
-      this.api.reset();
+      this.api.resetMynt();
       this.mynt={
         twenty:null,
         ten:null,
         five:null,
         one:null,
       }
+      localStorage.removeItem('myntcount');
+      this.myntcount=this.api.mynttotal
     }
 
 

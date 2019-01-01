@@ -34,6 +34,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages: true,
       
+      
     })
   ],
   bootstrap: [IonicApp],

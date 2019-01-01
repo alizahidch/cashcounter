@@ -3,6 +3,7 @@ page-contact {
   ion-input {
     input {
       text-align: center;
+      
       /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
       ::-webkit-input-placeholder {
         text-align: center;
@@ -17,10 +18,20 @@ page-contact {
   .buttonx{
     background-color:#177556;
     color:#ffff;
-    padding:10px;
+    padding:30px;
     font-size: 20px;
     justify-content: center;
     text-align: center;
 
   }
+  .buttony{
+    background-color:greenyellow;
+    color:black;
+    padding:20px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+
+  }
+
 }

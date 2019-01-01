@@ -7,7 +7,7 @@ import { ApiProvider } from '../../providers/api/api';
   templateUrl: 'contact.html'
 })
 export class ContactPage   {
-
+myntrullcount=this.api.myntrulltotal;
 
 
   myntrull={
@@ -22,12 +22,15 @@ export class ContactPage   {
 
     ionViewDidLoad(){
       this.myntrull = this.api.myntrull;
+      this.myntrullcount=this.api.myntrulltotal;
     }
 
 
     total(){
       let number = (this.myntrull.twenty * 20) + (this.myntrull.ten * 10) + (this.myntrull.five * 5) + (this.myntrull.one * 1) ;
-    return number;
+      this.myntrullcount=number;
+      // localStorage.setItem('myntrullcount',this.myntrullcount);
+    return this.myntrullcount
     }
 
 
@@ -40,6 +43,8 @@ export class ContactPage   {
         five:null,
         one:null,
       }
+      localStorage.removeItem('myntrullcount');
+      this.myntrullcount=this.api.myntrulltotal;
     }
 
 

@@ -1,32 +1,33 @@
 <ion-header>
   <ion-navbar color="secondary" text-center>
-    <ion-title>Cash Counter</ion-title>
+    <ion-title>Cash Flow</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content >
   <div style="width:100%">
-    <ion-grid >
-      <ion-row class="bgx">
-        <ion-col col-4 text-center>
-          valør
-        </ion-col>
-        <ion-col col-4 text-center>
-            antall
+      <ion-row class="bgx" margin:0>
+          <ion-col col-4 text-center>
+            valør
           </ion-col>
           <ion-col col-4 text-center>
-              beløp
+              antall
             </ion-col>
-      </ion-row>
+            <ion-col col-4 text-center>
+                beløp
+              </ion-col>
+        </ion-row>
+    <ion-grid >
+    
 <br>
       <ion-row>
         <ion-col col-4 class="buttonx">
           1000
         </ion-col>
-        <ion-col col-4>
-          <ion-item>
-            <ion-input  type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.thousand"></ion-input>
-          </ion-item>
+        <ion-col col-4 class="buttony">
+          
+            <ion-input  type="number"  style="background-color:#1775562f;color:black;margin:0;" [(ngModel)]="sedler.thousand"></ion-input>
+          
         </ion-col>
         <ion-col col-4 class="buttonx">
            {{sedler.thousand * 1000 || 0}}
@@ -37,10 +38,10 @@
         <ion-col col-4 class="buttonx">
           500
         </ion-col>
-        <ion-col col-4>
-          <ion-item>
+        <ion-col col-4 class="buttony">
+        
             <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.five"></ion-input>
-          </ion-item>
+        
         </ion-col>
         <ion-col col-4 class="buttonx">
             {{sedler.five * 500 || 0}}
@@ -51,10 +52,10 @@
         <ion-col col-4 class="buttonx">
           200
         </ion-col>
-        <ion-col col-4>
-          <ion-item>
+        <ion-col col-4 class="buttony">
+         
             <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.two"></ion-input>
-          </ion-item>
+      
         </ion-col>
         <ion-col col-4 class="buttonx">
             {{sedler.two * 200 || 0}}
@@ -65,10 +66,10 @@
         <ion-col col-4 class="buttonx">
           100
         </ion-col>
-        <ion-col col-4>
-          <ion-item>
+        <ion-col col-4 class="buttony">
+        
             <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.hundred"></ion-input>
-          </ion-item>
+    
         </ion-col>
         <ion-col col-4 class="buttonx">
             {{sedler.hundred * 100 || 0}}
@@ -79,10 +80,10 @@
         <ion-col col-4 class="buttonx">
           50
         </ion-col>
-        <ion-col col-4>
-          <ion-item>
+        <ion-col col-4 class="buttony">
+        
             <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="sedler.fifty"></ion-input>
-          </ion-item>
+       
         </ion-col>
         <ion-col col-4 class="buttonx">
             {{sedler.fifty * 50}}
@@ -99,21 +100,22 @@
     </ion-grid>
 
   </div>
+  <ion-row>
+    <ion-col text-center class="bgx" style="padding:15px">
+      total  = {{total()|| 0 }}
+
+  </ion-col>
+  </ion-row>
+<ion-row>
+<ion-col text-center >
+  <button ion-button icon-only (click)="reset()">
+    <ion-icon name="md-refresh"></ion-icon>
+  </button>
+
+</ion-col>
+</ion-row>
 </ion-content>
 
-<ion-footer no-margin no-padding style="position: absolute; bottom: 0px; width: 100%">
-    <ion-row>
-        <ion-col text-center class="bgx" style="padding:15px">
-            total = {{total() || 0 }}
-
-        </ion-col>
-      </ion-row>
-  <ion-row>
-    <ion-col text-center>
-      <button ion-button icon-only (click)="reset()">
-        <ion-icon name="md-refresh"></ion-icon>
-      </button>
-
-    </ion-col>
-  </ion-row>
-</ion-footer>
+<!-- <ion-footer no-margin no-padding style="position: absolute; bottom: 0px; width: 100%"  >
+   
+</ion-footer> -->
