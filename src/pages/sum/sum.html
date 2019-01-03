@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="secondary" text-center>
+    <ion-navbar color="primary" text-center>
       <ion-title>Cash Flow</ion-title>
       <ion-buttons end>
         <button ion-button icon-only (click)="go()">
@@ -21,7 +21,7 @@
 
         <ion-row >
           
-          <ion-col text-center class="bgx" style="padding:15px;background-color:#177556;color:white;font-size: 20px;">
+          <ion-col text-center  style="padding:15px;font-size: 20px;background-color:#00887a;color: white">
               total sum = {{totalsum  }}
           </ion-col>
         </ion-row>
@@ -40,7 +40,7 @@
   <ion-footer no-margin no-padding>
     <ion-row>
       <ion-col text-center>
-        <button ion-button icon-only (click)="reset()">
+        <button style="background-color:#004D40" ion-button icon-only (click)="reset()">
           <ion-icon name="ios-sync-outline"></ion-icon>
         </button>
       </ion-col>

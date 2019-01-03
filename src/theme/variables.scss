@@ -34,11 +34,14 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #177556,
+  primary:    #004D40,
   secondary:  #177556,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  pri:        #004D40,
+  tabcolor:   #00695b,
+  total:      #00897B,
 );
 
 
@@ -89,7 +92,7 @@ $colors: (
 
 .tab-button[aria-selected=true] {
   
-  text-decoration: underline !important;
+  text-decoration: underline overline  !important;
   }
   .tab-button{
     font-weight: bold

@@ -1,32 +1,30 @@
 <ion-header>
-    <ion-navbar color="secondary" text-center>
+    <ion-navbar color="primary" text-center>
       <ion-title>Cash Flow</ion-title>
     </ion-navbar>
   </ion-header>
 
   <ion-content >
     <div style="width:100%">
-        <ion-row class="bgx">
-            <ion-col col-4 text-center>
-              valør
+      <ion-row class="bgx" margin:0>
+          <ion-col col-4 text-center>
+            valør
+          </ion-col>
+          <ion-col col-4 text-center>
+              antall
             </ion-col>
             <ion-col col-4 text-center>
-                antall
+                beløp
               </ion-col>
-              <ion-col col-4 text-center>
-                  beløp
-                </ion-col>
-          </ion-row>
-      <ion-grid >
-       
-  <br>
-        <ion-row>
+        </ion-row>
+    <ion-grid >
+        <ion-row style=" height: 70px !important;">
           <ion-col col-4 class="buttonx">
             20
           </ion-col>
           <ion-col col-4 class="buttony">
        
-              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="myntrull.twenty"></ion-input>
+              <ion-input type="number"  style="margin:0;" [(ngModel)]="myntrull.twenty"></ion-input>
         
           </ion-col>
           <ion-col col-4 class="buttonx">
@@ -34,13 +32,13 @@
             </ion-col>
         </ion-row>
         <br>
-        <ion-row>
+        <ion-row style=" height: 70px !important;">
           <ion-col col-4 class="buttonx">
             10
           </ion-col>
           <ion-col col-4 class="buttony">
      
-              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="myntrull.ten"></ion-input>
+              <ion-input type="number"  style="margin:0;" [(ngModel)]="myntrull.ten"></ion-input>
          
           </ion-col>
           <ion-col col-4 class="buttonx">
@@ -48,13 +46,13 @@
             </ion-col>
         </ion-row>
         <br>
-        <ion-row>
+        <ion-row style=" height: 70px !important;">
           <ion-col col-4 class="buttonx">
             5
           </ion-col>
           <ion-col col-4 class="buttony">
        
-              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="myntrull.five"></ion-input>
+              <ion-input type="number"  style="margin:0;" [(ngModel)]="myntrull.five"></ion-input>
       
           </ion-col>
           <ion-col col-4 class="buttonx">
@@ -62,13 +60,13 @@
             </ion-col>
         </ion-row>
         <br>
-        <ion-row>
+        <ion-row style=" height: 70px !important;">
           <ion-col col-4 class="buttonx">
             1
           </ion-col>
           <ion-col col-4 class="buttony">
       
-              <ion-input type="number"  style="background-color:#1775562f;margin:0;" [(ngModel)]="myntrull.one"></ion-input>
+              <ion-input type="number"  style="margin:0;" [(ngModel)]="myntrull.one"></ion-input>
        
           </ion-col>
           <ion-col col-4 class="buttonx">
@@ -82,15 +80,15 @@
       </ion-grid>
 
     </div>
-    <ion-row  style="margin-top:20px">
-      <ion-col text-center class="bgx" style="padding:15px">
+    <ion-row  >
+      <ion-col text-center class="bgx" style="padding:15px;font-size: 20px;background-color:#00887a">
           total  = {{total() || 0 }}
 
       </ion-col>
     </ion-row>
 <ion-row>
   <ion-col text-center>
-    <button ion-button icon-only (click)="reset()" >
+    <button style="background-color:#00887a" ion-button icon-only (click)="reset()" >
       <ion-icon name="md-refresh" ></ion-icon>
     </button>
 

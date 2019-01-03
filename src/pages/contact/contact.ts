@@ -36,7 +36,7 @@ myntrullcount=this.api.myntrulltotal;
 
 
     reset(){
-      this.api.reset();
+      this.api.resetMyntrull();
       this.myntrull={
         twenty:null,
         ten:null,

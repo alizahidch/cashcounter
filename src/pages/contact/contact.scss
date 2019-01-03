@@ -1,37 +1,74 @@
 page-contact {
 
+  // ion-input {
+  //   input {
+  //     text-align: center;
+      
+  //     /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
+  //     ::-webkit-input-placeholder {
+  //       text-align: center;
+  //     }
+  //   }
+  // }
+
+  // .bgx{
+  //   background-color:#177556;
+  //   color:#ffff;
+  // }
+  // .buttonx{
+  //   background-color:#177556;
+  //   color:#ffff;
+  //   padding:30px;
+  //   font-size: 20px;
+  //   justify-content: center;
+  //   text-align: center;
+
+  // }
+  // .buttony{
+  //   background-color:greenyellow;
+  //   color:black;
+  //   padding:20px;
+  //   font-size: 20px;
+  //   justify-content: center;
+  //   text-align: center;
+
+  // }
+
   ion-input {
+    //  background-color:#c4c3c39f !important;
+    // color:#ffff !important;
+    // width: 100% !important;
     input {
       text-align: center;
-      
       /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
       ::-webkit-input-placeholder {
         text-align: center;
       }
     }
+   
   }
-
+  
+ 
   .bgx{
-    background-color:#177556;
+    background-color:#009788;
     color:#ffff;
   }
   .buttonx{
-    background-color:#177556;
+    background-color:#009788;
     color:#ffff;
-    padding:30px;
-    font-size: 20px;
-    justify-content: center;
-    text-align: center;
-
-  }
-  .buttony{
-    background-color:greenyellow;
-    color:black;
     padding:20px;
     font-size: 20px;
     justify-content: center;
     text-align: center;
-
+    height:60px
   }
-
+  .buttony{
+    background-color:#80cbc4;
+    color:black;
+    padding:5px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    height:60px
+  }
 }
